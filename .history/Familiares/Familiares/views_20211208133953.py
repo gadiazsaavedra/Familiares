@@ -27,12 +27,11 @@ def template1(request):
     hermanoViejo = ["Luis", "Pedro", "Juan", "Carlos"]
     dicc = {'nombre': mejorHermano, 'anios': anios, 'olderbro':hermanoViejo}
     
-    plantilla1 = loader.get_template("template1.html")
+    plantilla1loader.get_template("template1.html")
     
     #html1 = open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html")
     #plantilla1 = Template(html1.read())
     #html1.close()
-    #contexto1 = Context(dicc)
-    #documento1 = plantilla1.render(contexto1)
-    documento1 = plantilla1.render(dicc)
+    contexto1 = Context(dicc)
+    documento1 = plantilla1.render(contexto1)
     return HttpResponse(documento1)

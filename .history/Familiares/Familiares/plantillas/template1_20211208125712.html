@@ -14,19 +14,15 @@
     <br>
     <h2>El mejor hermano es : {{nombre}}</h2>
     <h2>y su edad es : {{anios}}</h2>
-    <br>
-    <br>
-    <br>
-    <h1>Aca presentamos al hermano mas viejo </h1>
+    <h1>El hermano mas viejo </h1>
     <br>
     {% for hermano in olderbro %}
         
-        {% if hermano == "Pedro" %}
-            <h2 style="color: deeppink;">El hermano mas viejo es : {{hermano}}</h2>
-        {% else %}
-            <h2>{{hermano}}</h2>
+        {% if hermano == "".edad > olderbro.edad %}
+            <h2>El mejor hermano es : {{hermano.nombre}}</h2>
+            <h2>y su edad es : {{hermano.edad}}</h2>
         {% endif %}
-        
+        <h2>{{hermano}}</h2>
 
         
     {% endfor %}

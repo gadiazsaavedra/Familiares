@@ -1,8 +1,6 @@
 from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context
-from django.template import loader
-
 def saludo(request):
     return HttpResponse("<h1><center><br><br>Presentacion de los integrantes de la familia</center></h1><br><br><h2>Luis<br>Juan<br>Pedro</h2><br>")
 
@@ -24,15 +22,12 @@ def antiguedad(request, edad):
 def template1(request):
     mejorHermano = "Pedro"
     anios = datetime.now().year - 1966
-    hermanoViejo = ["Luis", "Pedro", "Juan", "Carlos"]
-    dicc = {'nombre': mejorHermano, 'anios': anios, 'olderbro':hermanoViejo}
+    dicc = {'nombre': mejorHermano, 'anios': anios}
+    hermanoViejo = ["Pedro", "JUan"]
     
-    plantilla1 = loader.get_template("template1.html")
-    
-    #html1 = open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html")
-    #plantilla1 = Template(html1.read())
-    #html1.close()
-    #contexto1 = Context(dicc)
-    #documento1 = plantilla1.render(contexto1)
-    documento1 = plantilla1.render(dicc)
+    html1 = open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html")
+    plantilla1 = Template(html1.read())
+    html1.close()
+    contexto1 = Context(dicc)
+    documento1 = plantilla1.render(contexto1)
     return HttpResponse(documento1)

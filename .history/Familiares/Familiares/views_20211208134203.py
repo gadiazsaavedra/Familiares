@@ -33,6 +33,5 @@ def template1(request):
     #plantilla1 = Template(html1.read())
     #html1.close()
     #contexto1 = Context(dicc)
-    #documento1 = plantilla1.render(contexto1)
-    documento1 = plantilla1.render(dicc)
+    documento1 = plantilla1.render(contexto1)
     return HttpResponse(documento1)
