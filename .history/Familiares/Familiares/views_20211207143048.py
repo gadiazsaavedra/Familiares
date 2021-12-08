@@ -1,0 +1,7 @@
+from django.http import HttpResponse
+
+def saludo(request):
+    return HttpResponse("<h1Presentacion de los integrantes de la familia<br><br>Luis<br>Juan<br>Pedro<br>")
+
+def relacion(request):
+    return HttpResponse("La relacion de parentesco de en la familia<br><br>Luis<br>Juan<br>Pedro<br>Son hermanos<br>")
