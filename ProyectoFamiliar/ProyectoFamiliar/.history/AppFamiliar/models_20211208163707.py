@@ -19,4 +19,3 @@ class Hijos(models.Model):
 class Conyuge(models.Model):
     nombre = models.CharField(max_length=50)
     casada = models.BooleanField(default=False)
-    

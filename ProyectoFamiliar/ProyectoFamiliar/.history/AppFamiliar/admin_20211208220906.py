@@ -4,5 +4,3 @@ from django.contrib import admin
 from .models import *
 
 admin.site.register(Padres)
-admin.site.register(Hijos)
-admin.site.register(Conyuge)
