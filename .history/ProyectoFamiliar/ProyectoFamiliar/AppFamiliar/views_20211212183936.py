@@ -30,7 +30,7 @@ def  abuelosFormulario(request):
         miFormulario = AbuelosFormulario()
         
         
-    return render(request, 'AppFamiliar/abuelosFormulario.html', {'miFormulario': miFormulario})
+    return render(request, 'AppFamiliar/abuelosFormulario.html', {'formulario': miFormulario})
 
 def inicio(request):
     return render(request, 'AppFamiliar/inicio.html')

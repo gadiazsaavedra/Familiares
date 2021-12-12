@@ -20,7 +20,7 @@ def buscar(request):
 def  abuelosFormulario(request):
     if request.method == 'POST':
         miFormulario = AbuelosFormulario(request.POST)
-        print(miFormulario)
+        print
         if miFormulario.is_valid():
                 informacion = miFormulario.cleaned_data
                 abuelos = Abuelos(nombre=informacion['nombre'], apellido=informacion['apellido'], direccion=informacion['direccion'], ciudad=informacion['ciudad'], pais=informacion['pais'], anio=informacion['anio'],  imagen=informacion['imagen'])                
@@ -30,7 +30,7 @@ def  abuelosFormulario(request):
         miFormulario = AbuelosFormulario()
         
         
-    return render(request, 'AppFamiliar/abuelosFormulario.html', {'miFormulario': miFormulario})
+    return render(request, 'AppFamiliar/abuelosFormulario.html', {'formulario': miFormulario})
 
 def inicio(request):
     return render(request, 'AppFamiliar/inicio.html')
