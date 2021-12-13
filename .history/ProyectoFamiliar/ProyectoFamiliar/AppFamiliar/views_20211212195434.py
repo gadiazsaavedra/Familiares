@@ -23,7 +23,7 @@ def  abuelosFormulario(request):
         print(miFormulario)
         if miFormulario.is_valid():
                 informacion = miFormulario.cleaned_data
-                abuelos = Abuelos(nombre=informacion['nombre'], apellido=informacion['apellido'], edad=informacion['edad'])               
+                abuelos = Abuelos(nombre=informacion['nombre'], apellido=informacion['apellido'], direccion=informacion['direccion'], ciudad=informacion['ciudad'], pais=informacion['pais'], edad=informacion['anio'],  imagen=informacion['imagen'])                
                 abuelos.save()
                 return render(request, 'AppFamiliar/inicio.html')
     else:
