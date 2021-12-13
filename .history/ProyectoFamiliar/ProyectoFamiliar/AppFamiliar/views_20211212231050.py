@@ -12,9 +12,9 @@ def buscar(request):
         conyuge = Conyuge.objects.filter(nombre__icontains=nombre)
     
         return render(request, 'AppFamiliar/resultadoBusqueda.html', {'conyuge': conyuge, 'nombre': nombre})
-    else:
+    #else:
         #respuesta = "Porfa ingresar un nombre"
-        respuesta = f"Estoy buscando la conyuge de nombre {request.GET['nombre']}"
+    respuesta = f"Estoy buscando la conyuge de nombre {request.GET['nombre']}"
     return HttpResponse(respuesta)
 # Create your views here.
 def  abuelosFormulario(request):
