@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 {% extends "AppFamiliar/padre.html" %}
 
 
 {% load static %}
 
         {% block contenido2 %}
-        <h1 class="masthead-heading text-uppercase mb-0">Formulario de los Abuelos</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">Formulario de Hijo</h1>
         {% endblock %}
 
 
@@ -17,7 +16,7 @@
 
         {% endif %}
 
-        <form action="/AppFamiliar/abuelosFormulario" method="POST">{% csrf_token %}
+        <form action="/AppFamiliar/hijoFormulario" method="POST">{% csrf_token %}
 
 
                 <table>
