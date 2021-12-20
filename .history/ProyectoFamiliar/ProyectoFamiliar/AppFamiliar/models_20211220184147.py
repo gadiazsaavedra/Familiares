@@ -16,8 +16,7 @@ class Hijo(models.Model):
     apellido = models.CharField(max_length=50)
     numero = models.IntegerField()
     esBueno = models.BooleanField()
-    def __str__(self):
-        return f"HIJO: {self.apellido} NUMERO: {self.numero} ES_BUENO: {self.esBueno}"
+    def
     
 class Conyuge(models.Model):
     nombre = models.CharField(max_length=50)

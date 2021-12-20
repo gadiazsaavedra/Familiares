@@ -1,7 +1,7 @@
 from django.urls import path
 from AppFamiliar import views
-
-
+from django.urls import reverse
+reverse('post_detail', args=)
 
 urlpatterns = [
     
