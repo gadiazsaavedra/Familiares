@@ -1,0 +1,23 @@
+{% extends "AppFamiliar/padre.html" %}
+
+{% load static %}
+
+        {% block contenido2 %}
+            <h1 class="mb-1">Detalle del Padre</h1>
+        {% endblock %}
+
+        {% block contenido %}
+
+          <p>Nombre del padre: <i> {{ curso.nombre}}</i></p>
+          <p>Camada del curso: <i> {{ curso.camada}}</i></p>
+          <p>Es de noche: <i> {{ curso.esNoche}}</i></p>
+
+          <p>
+
+            <a href="{% url 'List' %}">Regresar</a>
+
+          </p>
+         
+
+        {% endblock %}
+

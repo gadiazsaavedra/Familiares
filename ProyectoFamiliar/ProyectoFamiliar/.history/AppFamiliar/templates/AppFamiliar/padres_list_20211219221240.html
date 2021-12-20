@@ -1,0 +1,33 @@
+{% extends "AppFamiliar/padre.html" %}
+
+{% load static %}
+
+        {% block contenido2 %}
+            <h1 class="mb-1">Lista de Padres</h1>
+        {% endblock %}
+
+        {% block contenido %}
+
+          <p>Acá tenemos todos los autos:</p> <br>
+          <ul>
+            {% for auto in object_list %}
+            <li>
+
+              <p>NOMBRE: {{ auto.nombre}}</p>
+
+              <p>
+              <a href="{% url 'Detail' auto.id %}">Ver más</a>
+              <a href="{% url 'Edit' auto.id %}">Editar</a>
+              <a href="{% url 'Delete' auto.id %}">Borrar</a>
+
+            </p>
+
+            </li>
+
+            {% endfor %}
+
+
+          </ul>
+         
+
+        {% endblock %}
