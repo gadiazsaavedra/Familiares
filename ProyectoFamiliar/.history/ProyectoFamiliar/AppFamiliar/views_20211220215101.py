@@ -199,7 +199,7 @@ def register(request):
                   
                   form.save()
                   
-                  return render(request,"AppFamiliar/inicio.html" ,  {"mensaje":f"{username} fue creado como usuario..!!"})
+                  return render(request,"AppFamiliar/inicio.html" ,  {"mensaje":f"{username} Creado como  :)"})
 
       else:
             #form = UserCreationForm()     
