@@ -17,14 +17,17 @@ def buscar(request):
         
     return HttpResponse(respuesta)
 # Create your views here.
-def  abuelosFormulario(request):
+def abuelosFormulario(request):
     if request.method == 'POST':
         miFormulario = AbuelosFormulario(request.POST)
-            if miFormulario.is_valid():
-                informacion = miFormulario.cleaned_data
-                abuelosInsta = Abuelos                
-                miFormulario.save()
-        return HttpResponse("Nombre: " + nombre + " Capacidad: " + capacidad + " Ubicacion: " + ubicacion)
+        if miFormulario.is_valid():
+            informacion = miFormulario.cleaned_data
+            abuelosInsta = Abuelos                
+            miFormulario.save()
+        return HttpResponse(
+            f"Nombre: {nombre} Capacidad: {capacidad} Ubicacion: {ubicacion}"
+        )
+
     return render(request, 'AppFamiliar/estadioFormulario.html')
 
 

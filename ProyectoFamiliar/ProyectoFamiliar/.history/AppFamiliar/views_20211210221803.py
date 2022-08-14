@@ -10,7 +10,7 @@ def buscar(request):
     if request.GET["nombre"]:
         nombre = request.GET['nombre']
         Conyuge = Conyuge.objects.filter(nombre=nombre)
-    respuesta = f"Estoy buscando"
+    respuesta = "Estoy buscando"
     return render(request, 'AppFamiliar/buscar.html')
 # Create your views here.
 def inicio(request):
@@ -19,13 +19,16 @@ def inicio(request):
 def jugadores(request):
     return render(request, 'AppFamiliar/jugadores.html')
 
-def  estadioFormulario(request):
+def estadioFormulario(request):
     if request.method == 'POST':
         miFormulario = EstadioFormulario(request.POST)
-            if miFormulario.is_valid():
-                informacion = miFormulario.cleaned_data
-                
-                miFormulario.save()
-        return HttpResponse("Nombre: " + nombre + " Capacidad: " + capacidad + " Ubicacion: " + ubicacion)
+        if miFormulario.is_valid():
+            informacion = miFormulario.cleaned_data
+
+            miFormulario.save()
+        return HttpResponse(
+            f"Nombre: {nombre} Capacidad: {capacidad} Ubicacion: {ubicacion}"
+        )
+
     return render(request, 'AppFamiliar/estadioFormulario.html')
     

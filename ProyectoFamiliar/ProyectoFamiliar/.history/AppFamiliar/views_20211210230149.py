@@ -17,7 +17,7 @@ def buscar(request):
         
     return HttpResponse(respuesta)
 # Create your views here.
-def  abuelosFormulario(request):
+def abuelosFormulario(request):
     if request.method == 'POST':
         miFormulario = AbuelosFormulario(request.POST)
         if miFormulario.is_valid():
@@ -27,14 +27,8 @@ def  abuelosFormulario(request):
                 return render(request, 'AppFamiliar/inicio.html')
     else:
         miFormulario = AbuelosFormulario()
-        
-        
+
+
     return render(request, 'AppFamiliar/abuelosFormulario.html', {'formulario': miFormulario})
-
-    def inicio(request):
-        return render(request, 'AppFamiliar/inicio.html')
-
-    def jugadores(request):
-        return render(request, 'AppFamiliar/jugadores.html')
 
     

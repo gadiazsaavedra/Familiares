@@ -17,13 +17,16 @@ def inicio(request):
 def jugadores(request):
     return render(request, 'AppFamiliar/jugadores.html')
 
-def  estadioFormulario(request):
+def estadioFormulario(request):
     if request.method == 'POST':
         miFormulario = EstadioFormulario(request.POST)
-            if miFormulario.is_valid():
-                informacion = miFormulario.cleaned_data
-                
-                miFormulario.save()
-        return HttpResponse("Nombre: " + nombre + " Capacidad: " + capacidad + " Ubicacion: " + ubicacion)
+        if miFormulario.is_valid():
+            informacion = miFormulario.cleaned_data
+
+            miFormulario.save()
+        return HttpResponse(
+            f"Nombre: {nombre} Capacidad: {capacidad} Ubicacion: {ubicacion}"
+        )
+
     return render(request, 'AppFamiliar/estadioFormulario.html')
     
