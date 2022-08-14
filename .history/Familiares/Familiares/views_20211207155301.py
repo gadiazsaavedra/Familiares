@@ -20,7 +20,6 @@ def antiguedad(request, edad):
     return HttpResponse("<h1><center><br><br>Esta familia tiene origen en el año {antiguedad} </center></h1>".format(antiguedad=antiguedad))
 
 def template1(request):
-    html1 = open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html")
-    plantilla = Template(html1.read())
-    html1.close()
+    with open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html") as html1:
+        plantilla = Template(html1.read())
     contexto1 

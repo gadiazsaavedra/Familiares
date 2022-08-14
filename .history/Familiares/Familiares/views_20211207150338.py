@@ -10,5 +10,3 @@ def relacion(request):
 def dia(request):
     fecha = datetime.now()
     return HttpResponse("<h1><center>Que a la fecha : {fecha} estan todos vivos</center></h1>".format(fecha=fecha))
-
-    apellido

@@ -34,6 +34,5 @@ class Primo(models.Model):
     dni = models.IntegerField()
     profesional = models.BooleanField()
     fechaDeNacimiento = models.DateField()
-    
     #def __str__(self):
-        return f"Primo: {self.nombre} APELLIDO: {self.apellido} DNI: {self.dni} PROFESIONAL: {self.profesional} FECHA_NACIMIENTO: {self.fechaDeNacimiento}"
+    pass

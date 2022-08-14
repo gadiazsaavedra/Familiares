@@ -23,10 +23,9 @@ def template1(request):
     mejorHermano = "Pedro"
     anios = datetime.now().year - 1992
     dicc = {'mejorHermano': mejorHermano, 'anios': anios}
-    
-    html1 = open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html")
-    plantilla1 = Template(html1.read())
-    html1.close()
+
+    with open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html") as html1:
+        plantilla1 = Template(html1.read())
     contexto1 = Context()
     documento1 = plantilla1.render(contexto1)
     return HttpResponse(documento1)

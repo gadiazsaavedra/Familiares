@@ -26,9 +26,9 @@ def template1(request):
     anios = datetime.now().year - 1966
     hermanoViejo = ["Luis", "Pedro", "Juan", "Carlos"]
     dicc = {'nombre': mejorHermano, 'anios': anios, 'olderbro':hermanoViejo}
-    
+
     loader.get_template("template1.html")
-    
+
     #html1 = open("C:/Users/gdiaz/OneDrive/GOOGLE DRIVE/Gustavo/Curso programacion/Coder House/ProyectoFamiliares/Familiares/Familiares/plantillas/template1.html")
     #plantilla1 = Template(html1.read())
     html1.close()

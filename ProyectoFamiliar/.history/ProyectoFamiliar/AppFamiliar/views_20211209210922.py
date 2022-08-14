@@ -8,11 +8,14 @@ def inicio(request):
 def jugadores(request):
     return render(request, 'AppFamiliar/jugadores.html')
 
-def  estadioFormulario(request):
+def estadioFormulario(request):
     if request.method == 'POST':
         nombre = request.POST.get('nombre')
         capacidad = request.POST.get('capacidad')
         ubicacion = request.POST.get('ubicacion')
-        return HttpResponse("Nombre: " + nombre + " Capacidad: " + capacidad + " Ubicacion: " + ubicacion)
+        return HttpResponse(
+            f"Nombre: {nombre} Capacidad: {capacidad} Ubicacion: {ubicacion}"
+        )
+
     return render(request, 'AppFamiliar/estadioFormulario.html')
     
